@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    implementation group : 'com.yahoofinance-api', name : 'YahooFinanceAPI', version : '3.17.0'
+
+    implementation 'ch.qos.logback:logback-classic:1.2.11'
+
+    implementation 'org.openjfx:javafx-controls:11'
+    implementation 'org.openjfx:javafx-graphics:11'
+    implementation 'org.openjfx:javafx-fxml:11'
+    implementation 'org.openjfx:javafx-media:11'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
